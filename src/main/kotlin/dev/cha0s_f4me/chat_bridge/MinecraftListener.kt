@@ -3,10 +3,7 @@ package dev.cha0s_f4me.chat_bridge
 import dev.kord.common.Color
 import dev.kord.core.behavior.channel.createEmbed
 import io.papermc.paper.event.player.AsyncChatEvent
-import net.kyori.adventure.extra.kotlin.text
-import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.TextComponent
-import net.kyori.adventure.text.event.ClickEvent
 import net.kyori.adventure.text.format.NamedTextColor
 import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer
 import org.bukkit.event.EventHandler
