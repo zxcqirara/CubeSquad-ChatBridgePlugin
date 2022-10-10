@@ -1,0 +1,8 @@
+main: dev.cha0s_f4me.chat_bridge.Main
+
+name: ChatBridge
+author: ChA0S_f4me
+
+version: 1.0
+api-version: 1.18
+prefix: CB
