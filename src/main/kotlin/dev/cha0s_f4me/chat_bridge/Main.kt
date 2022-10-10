@@ -6,10 +6,12 @@ import com.github.shynixn.mccoroutine.bukkit.registerSuspendingEvents
 import dev.kord.common.annotation.KordExperimental
 import dev.kord.common.entity.Snowflake
 import dev.kord.core.Kord
+import dev.kord.core.behavior.channel.createEmbed
 import dev.kord.core.behavior.getChannelOfOrNull
 import dev.kord.core.entity.channel.GuildMessageChannel
 import dev.kord.gateway.Intent
 import dev.kord.gateway.PrivilegedIntent
+import net.kyori.adventure.text.format.NamedTextColor
 
 @PrivilegedIntent
 @KordExperimental
@@ -65,5 +67,17 @@ class Main : SuspendingJavaPlugin() {
 
 		server.pluginManager.registerSuspendingEvents(MinecraftListener(), this)
 		Commands.init(this)
+
+		Discord.channel.createEmbed {
+			title = "Server started"
+			color = NamedTextColor.AQUA.toKordColor()
+		}
+	}
+
+	override suspend fun onDisableAsync() {
+		Discord.channel.createEmbed {
+			title = "Server stopped"
+			color = NamedTextColor.RED.toKordColor()
+		}
 	}
 }
