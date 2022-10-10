@@ -3,3 +3,4 @@
 /build/
 /build/classes/kotlin/main/
 /.idea/
+/gradle/wrapper/gradle-wrapper.jar
