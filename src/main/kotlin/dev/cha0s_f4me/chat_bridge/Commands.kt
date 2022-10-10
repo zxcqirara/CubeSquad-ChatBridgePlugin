@@ -29,10 +29,10 @@ object Commands {
 			{ it }, { it }
 		)
 
-		if (manager.queryCapability(CloudBukkitCapabilities.ASYNCHRONOUS_COMPLETION))
+		if (manager.hasCapability(CloudBukkitCapabilities.ASYNCHRONOUS_COMPLETION))
 			manager.registerAsynchronousCompletions()
 
-		if (manager.queryCapability(CloudBukkitCapabilities.BRIGADIER))
+		if (manager.hasCapability(CloudBukkitCapabilities.BRIGADIER))
 			manager.registerBrigadier()
 
 		manager.command(
